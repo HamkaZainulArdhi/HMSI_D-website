@@ -1,7 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap')
-layer(base);
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&display=swap');
 
 @import 'tailwindcss';
+/* @import "tailwindcss/preflight";
+@tailwind utilities;
+@tailwind utilities; */
 
 @custom-variant dark (&:is(.dark *));
 
@@ -17,11 +19,13 @@ layer(base);
   --color-current: currentColor;
   --color-transparent: transparent;
   --color-white: #ffffff;
-  --color-black: #121723;
+  --color-black: #161616;
   --color-dark: #1d2430;
   --color-primary: #4a6cf7;
   --color-yellow: #fbb040;
   --color-bg-color-dark: #171c28;
+  --color-whitecus: #f0f0f0;
+
 
   --color-body-color: #788293;
   --color-body-color-dark: #959cb1;
@@ -132,4 +136,12 @@ layer(base);
   input[type="checkbox"]:checked ~ label span svg {
     @apply inline-flex;
   }
+}
+
+.text-playfair {
+  font-family: var(--playfair-font), serif;
+}
+
+.text-poppins {
+  font-family: var(--poppins-font), sans-serif;
 }
