@@ -4,7 +4,7 @@ import HeroGladiators from './globe';
 
 const CircularGalleryDemo = () => {
   return (
-    <div className="relative h-[900px] overflow-hidden">
+    <div className="relative h-[650px] top-[-100px] sm:top-0 overflow-hidden">
       {/* Background orange globe */}
       <HeroGladiators />
 

@@ -51,7 +51,7 @@ export default function CircularGallery({
   
   return (
     <div
-      className="border-2 border-white h-[400px] w-full cursor-grab overflow-hidden active:cursor-grabbing"
+      className=" h-[400px] w-full cursor-grab overflow-hidden active:cursor-grabbing"
       ref={containerRef}
     />
   );

@@ -6,6 +6,7 @@ import Hero from "@/components/Hero";
 import ProfileSection from "@/components/feedIG/MovingBorder";
 import { Metadata } from "next";
 import CircularGalleryDemo from "@/components/globe/circulargallery";
+import FAQAccordion from "@/components/Accordion/index";
 
 
 export const metadata: Metadata = {
@@ -21,6 +22,8 @@ export default function Home() {
       <Hero />
       <ProfileSection />
       <CircularGalleryDemo />
+      <FAQAccordion />
+
       
       {/* <Features />
       

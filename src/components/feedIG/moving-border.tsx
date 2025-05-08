@@ -41,7 +41,7 @@ export function HoverBorderGradient({
   };
 
   const highlight =
-    "radial-gradient(75% 181% at 50% 50%, #E3651D 0%, rgba(255, 255, 255, 0) 100%)";
+    "radial-gradient(75% 181% at 50% 50%, #f0f0f0 0%, rgba(255, 255, 255, 0) 100%)";
 
   useEffect(() => {
     if (!hovered) {

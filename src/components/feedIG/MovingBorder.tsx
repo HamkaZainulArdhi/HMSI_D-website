@@ -20,15 +20,23 @@ export default function ProfileSection() {
         About us
       </h1>
       <p className="text-slate-600 dark:text-slate-300 text-center max-w-2xl mb-8">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate
-        libero et velit interdum, ac aliquet odio mattis.
+        We’re a team of future changemakers. or at least that’s what we told the lecturers.
+        Some came for the knowledge… the rest just to get attendance
+        
       </p>
 
       <HoverBorderGradient className="bg-slate-100 dark:bg-[#202020] border-slate-100 dark:border-slate-600">
         {/* Profile Header */}
         <div className="flex items-center justify-between p-7 ">
           <div className="flex items-center">
-            <div className="w-16 h-16 bg-slate-300 dark:bg-slate-200 rounded-xl mr-4"></div>
+            <div className="relative w-16 h-16 bg-slate-300 dark:bg-slate-200 rounded-xl mr-4 overflow-hidden">
+              <Image
+                src="/images/about/pp.png"
+                alt="Profile Image"
+                fill
+                className="object-cover"
+              />
+            </div>
             <div>
               <h2 className="text-slate-800 dark:text-white text-xl font-medium">@sid7.23</h2>
               <p className="text-slate-500 dark:text-slate-400 text-sm italic">999M followers</p>
@@ -39,7 +47,7 @@ export default function ProfileSection() {
           </a>
         </div>
 
-        <div className="p-6 px-20 w-full">
+        <div className="p-6 border-1 border-white -px-30 sm:px-24">
           {/* Gallery Grid - Top Row (4 images) */}
           <div className="grid grid-cols-4 gap-3 mb-3">
             {galleryImages.slice(0, 4).map((image) => (
@@ -69,9 +77,10 @@ export default function ProfileSection() {
           </div>
 
           {/* Bottom Text */}
-          <p className="text-slate-600 dark:text-slate-300 text-center mt-8">
-            Borem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate
-            libero et velit interdum, ac aliquet odio mattis.
+          <p className="text-slate-600 border-1 border-white dark:text-slate-300 text-xs sm:text-base text-center mt-8">
+          We’re a team of future changemakers. or at least that’s what we told the lecturers.
+        Some came for the knowledge… the rest just to get attendance
+        
           </p>
         </div>
       </HoverBorderGradient>
