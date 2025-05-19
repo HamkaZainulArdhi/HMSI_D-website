@@ -1,9 +1,9 @@
 "use client";
 import React from "react";
-import Image from "next/image"; // ✅ Import Image
+import Image from "next/image"; 
 import { HoverBorderGradient } from "@/components/feedIG/moving-border";
 
-export default function ProfileSection() {
+export default function ProfileSectionAbout() {
   const galleryImages = [
     { id: 1, src: "/images/about/photo01.png", alt: "Gallery Image 1" },
     { id: 2, src: "/images/about/photo02.png", alt: "Gallery Image 2" },
@@ -15,14 +15,24 @@ export default function ProfileSection() {
   ];
 
   return (
-    <div className="lg:min-h-screen border-1 border-white flex flex-col items-center justify-center py-12 px-4 sm:px-16 bg-whitecus dark:bg-black transition-colors duration-500">
-      <h1 style={{ fontFamily: "Playfair Display" }}   className="text-slate-900 dark:text-white text-5xl font-bold mb-4">
+    <div className="lg:min-h-screen  flex flex-col items-center justify-center py-12 px-4 sm:px-16 bg-whitecus dark:bg-black transition-colors duration-500 mt-15">
+      <h1 style={{ fontFamily: "Playfair Display" }} className="text-slate-900 dark:text-white text-5xl font-bold mb-4">
         About us
       </h1>
-      <p className="text-slate-600 dark:text-slate-300 text-center max-w-2xl mb-8">
-        We’re a team of future changemakers. or at least that’s what we told the lecturers.
-        Some came for the knowledge… the rest just to get attendance
-        
+      <div className="flex items-start  max-w-7xl">
+      <Image
+        src="/images/about/glint.png"
+        alt="Profile Image"
+        width={100}
+        height={100}
+        className="-mt-3  "
+      />
+      <p className="ml-auto text-justify text-[18px] text-slate-600 dark:text-slate-300  max-w-5xl">
+        Gorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur tempus urna at turpis kita harus kompak dalam segala aspek perkuliahan 4 tahun kita harus lulus semua amiien.
+      </p>
+      </div>
+      <p className="text-slate-600  text-justify text-[18px] dark:text-slate-300  e  mb-8">
+      Worem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur tempus urna at turpis condimentum lobortis. Ut commodo efficitur neque. Ut diam quam, semper iaculis condimentum ac, vestibulum eu temanan.
       </p>
 
       <HoverBorderGradient className="bg-slate-100 dark:bg-[#202020] border-slate-100 dark:border-slate-600">

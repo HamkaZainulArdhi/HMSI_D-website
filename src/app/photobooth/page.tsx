@@ -1,5 +1,6 @@
 import { PhotoboothDemo } from "@/components/photobooth/Photobooth";
 import Breadcrumb from "@/components/Common/Breadcrumb";
+import  Gallery  from "@/components/gallerycircular/tes";
 
 
 import { Metadata } from "next";
@@ -14,6 +15,7 @@ const PhotoboothPage = () => {
   return (
     <>
      <PhotoboothDemo />
+     <Gallery />
     </>
   );
 };

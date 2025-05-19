@@ -1,26 +1,23 @@
-import AboutSectionOne from "@/components/About/AboutSectionOne";
-import AboutSectionTwo from "@/components/About/AboutSectionTwo";
-import Breadcrumb from "@/components/Common/Breadcrumb";
-
+import  Gallery  from "@/components/gallerycircular/tes";
 import { Metadata } from "next";
+import ProfileSectionAbout from "@/components/feedIG about/MovingBorder";
+
+import GalleryPage from "@/components/galleryabout";
 
 export const metadata: Metadata = {
-  title: "About Page | Free Next.js Template for Startup and SaaS",
-  description: "This is About Page for Startup Nextjs Template",
+  title: "About Page | SID-7 2023",
+  description: "This is about Page for our stories at SID-7",
   // other metadata
 };
 
-const AboutPage = () => {
+const PhotoboothPage = () => {
   return (
     <>
-      <Breadcrumb
-        pageName="About Page"
-        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In varius eros eget sapien consectetur ultrices. Ut quis dapibus libero."
-      />
-      <AboutSectionOne />
-      <AboutSectionTwo />
+     <ProfileSectionAbout  />
+     {/* <Gallery /> */}
+     <GalleryPage />
     </>
   );
 };
 
-export default AboutPage;
+export default PhotoboothPage;

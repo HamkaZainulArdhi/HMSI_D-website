@@ -94,7 +94,7 @@ const FAQAccordion = () => {
   ];
 
   return (
-    <div className="bg-whitecus dark:bg-black text-center text-black dark:text-white min-h-screen w-full flex flex-col py-12 px-4" style={{ fontFamily: 'Playfair Display' }}>
+    <div className="bg-whitecus border-1 border-white dark:bg-black text-center text-black dark:text-white lg:min-h-screen w-full flex flex-col py-12  px-4" style={{ fontFamily: 'Playfair Display' }}>
        <h1 className="text-5xl font-bold mb-4">Schedule madness</h1>
       <div className="text-center mb-10 w-full" style={{ fontFamily: 'Poppins' }}>
         <p className="text-gray-700 dark:text-gray-400 text-lg" >Class? Nah. This is just our official nap schedule. Sleep tight, brainiacs.</p>

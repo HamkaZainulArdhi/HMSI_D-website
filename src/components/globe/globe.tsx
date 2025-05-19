@@ -9,10 +9,17 @@ export default function HeroGladiators() {
                       w-[150%] md:w-[140%] lg:w-[130%] xl:w-[120%] 
                       aspect-square">
           <Image
-            src="/images/heroglobe/Ellipse 3.png"
+            src="/images/heroglobe/ovalHITAM.png"
             alt="Glow background"
             fill
-            className="object-contain"
+            className="object-contain hidden dark:block"
+            priority
+          />
+          <Image
+            src="/images/heroglobe/oval.png"
+            alt="Glow background"
+            fill
+            className="object-contain block dark:hidden "
             priority
           />
         </div>

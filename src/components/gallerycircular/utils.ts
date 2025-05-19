@@ -2,7 +2,9 @@
  * Utility functions for the Circular Gallery component
  */
 
+
 import {  Texture, Renderer } from "ogl";
+
 
 /**
  * Debounce function to limit how often a function can be called
@@ -100,11 +102,13 @@ export interface AppConfig {
   font?: string;
 }
 
+
+
 // Default gallery items
 export const DEFAULT_GALLERY_ITEMS: GalleryItem[] = [
   { image: `/images/anggota/asbi.png`, text: "Asbi Ramadhan" },
   { image: `/images/anggota/adam.png`, text: "Adam Putra" },
-  { image: `/images/anggota/ching.png`, text: "Shoun Saechhing" },
+  { image: `/images/anggota/ching.png`, text: "Shound Saechhing" },
   { image: `/images/anggota/sendy.png`, text: "Sendy Oktavian" },
   { image: `/images/anggota/cinta.png`, text: "Cinta Allodya" },
   { image: `/images/anggota/hamka.png`, text: "Hamka Zainardhi" },
