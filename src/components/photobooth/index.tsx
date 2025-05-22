@@ -26,7 +26,6 @@ const Photobooth: React.FC = () => {
   const [bgColor, setBgColor] = useState<string>("#ffffff");
   const [photoCount, setPhotoCount] = useState<number>(4);
   const [delay, setDelay] = useState<number>(3);
-  const [aspectRatio, setAspectRatio] = useState<string>("4:3");
 
   // Constants
   const photoWidth = 140;
@@ -449,22 +448,23 @@ const Photobooth: React.FC = () => {
     setShowEditControls(false);
   };
 
-  const aspectRatios = [
-    { label: "1:1", value: "1:1" },
-    { label: "3:4", value: "3:4" },
-    { label: "4:3", value: "4:3" },
-    { label: "16:9", value: "16:9" },
-  ];
-
   return (
-    <div className="min-h-screen p-6">
+    <div className="mt-20 min-h-screen min-w-screen p-6">
       <div className="mx-auto max-w-7xl">
         {/* Header */}
         <div className="mb-8 text-center">
-          <h1 className="mb-2 text-6xl font-bold text-gray-800">
+          <h1
+            className="dark:text-whitecus mb-2 text-4xl font-bold text-black sm:text-5xl"
+            style={{ fontFamily: "Playfair Display" }}
+          >
             Snap Station
           </h1>
-          <p className="text-xl text-gray-600">
+          <img
+            src="/images/about/list.png"
+            alt="list bottom"
+            className="mx-auto mb-2 items-center"
+          />
+          <p className="dark:text-whitecus text-xl font-light text-black">
             Create beautiful photo strips with friends and family
           </p>
         </div>
@@ -476,7 +476,7 @@ const Photobooth: React.FC = () => {
             <select
               value={photoCount}
               onChange={(e) => setPhotoCount(Number(e.target.value))}
-              className="min-w-32 appearance-none rounded-full border-2 border-gray-300 bg-white px-6 py-3 font-medium text-gray-700 shadow-sm transition-all duration-200 hover:border-purple-400 hover:shadow-md focus:border-purple-500 focus:ring-2 focus:ring-purple-200 focus:outline-none"
+              className="dark:border-whitecus dark:text-whitecus min-w-32 appearance-none rounded-full border-2 border-gray-300 bg-white px-6 py-3 font-medium text-gray-700 shadow-sm transition-all duration-200 hover:border-yellow-600 hover:shadow-md focus:ring-2 focus:ring-purple-200 focus:outline-none dark:bg-black"
             >
               <option value={1}>1 photo</option>
               <option value={2}>2 photos</option>
@@ -507,7 +507,7 @@ const Photobooth: React.FC = () => {
             <select
               value={delay}
               onChange={(e) => setDelay(Number(e.target.value))}
-              className="min-w-32 appearance-none rounded-full border-2 border-gray-300 bg-white px-6 py-3 font-medium text-gray-700 shadow-sm transition-all duration-200 hover:border-purple-400 hover:shadow-md focus:border-purple-500 focus:ring-2 focus:ring-purple-200 focus:outline-none"
+              className="dark:border-whitecus dark:text-whitecus min-w-32 appearance-none rounded-full border-2 border-gray-300 bg-white px-6 py-3 font-medium text-gray-700 shadow-sm transition-all duration-200 hover:border-yellow-600 hover:shadow-md focus:outline-none dark:bg-black"
             >
               <option value={1}>1s delay</option>
               <option value={2}>2s delay</option>
@@ -538,14 +538,14 @@ const Photobooth: React.FC = () => {
           {/* Camera Section - Left/Center */}
           <div className="lg:col-span-2">
             {/* Camera Preview */}
-            <div className="bg-whitecus relative mb-6 overflow-hidden rounded-3xl p-4 shadow-xl">
-              <div className="relative overflow-hidden rounded-2xl bg-gray-100">
+            <div className="relative mb-6 overflow-hidden rounded-3xl p-4 shadow-xl">
+              <div className="relative overflow-hidden rounded-2xl bg-[#828282]">
                 <video
                   ref={videoRef}
                   className="h-auto scale-x-[-1] transform"
                   autoPlay
                   playsInline
-                  style={{ aspectRatio: aspectRatio.replace(":", "/") }}
+                  style={{ width: "100%", height: "auto" }}
                 />
                 {/* Flash overlay */}
                 <div
@@ -573,23 +573,6 @@ const Photobooth: React.FC = () => {
               >
                 <Camera size={32} />
               </button>
-            </div>
-
-            {/* Aspect Ratio Buttons */}
-            <div className="flex justify-center gap-2">
-              {aspectRatios.map(({ label, value }) => (
-                <button
-                  key={value}
-                  onClick={() => setAspectRatio(value)}
-                  className={`rounded-full px-4 py-2 text-sm font-medium transition-all duration-200 ${
-                    aspectRatio === value
-                      ? "bg-purple-500 text-white shadow-md"
-                      : "bg-white text-gray-700 shadow-sm hover:bg-gray-50 hover:shadow-md"
-                  }`}
-                >
-                  {label}
-                </button>
-              ))}
             </div>
 
             {/* Edit Controls */}
@@ -711,9 +694,9 @@ const Photobooth: React.FC = () => {
                     {Array.from({ length: photoCount }).map((_, index) => (
                       <div
                         key={index}
-                        className="flex h-32 items-center justify-center rounded-2xl border-2 border-dashed border-gray-300 bg-gray-50"
+                        className="flex h-32 items-center justify-center rounded-2xl border-2 border-dashed border-gray-300 bg-[#828282]"
                       >
-                        <span className="text-gray-400">Photo {index + 1}</span>
+                        <span className="text-gray-100">Photo {index + 1}</span>
                       </div>
                     ))}
                   </div>
