@@ -5,27 +5,27 @@ import Link from "next/link";
 const Footer = () => {
   return (
     <>
-      <footer className="relative z-10 bg-white pt-16 dark:bg-greyfooter md:pt-20 lg:pt-24">
+      <footer className="dark:bg-greyfooter relative z-10 bg-white pt-16 shadow-[0_-4px_10px_rgba(0,0,0,0.1)] md:pt-20 lg:pt-24">
         <div className="container">
           <div className="-mx-4 flex flex-wrap">
             <div className="w-full px-4 md:w-1/2 lg:w-4/12 xl:w-5/12">
-              <div className=" mb-10 max-w-[360px] lg:mb-16">
+              <div className="mb-10 max-w-[360px] lg:mb-16">
                 <div className="flex items-center gap-3">
-                  <p className="text-2xl font-medium leading-relaxed text-body-color dark:text-body-color-dark whitespace-nowrap">
+                  <p className="text-body-color dark:text-body-color-dark text-2xl leading-relaxed font-medium whitespace-nowrap">
                     Suit up, soldiers
                   </p>
-                  <div className="w-[85px] h-[3px] bg-gray-400 dark:bg-gray-600"></div>
+                  <div className="h-[3px] w-[85px] bg-gray-400 dark:bg-gray-600"></div>
                 </div>
-                <p className="text-2xl font-medium mb-8 leading-relaxed text-body-color dark:text-body-color-dark">
+                <p className="text-body-color dark:text-body-color-dark mb-8 text-2xl leading-relaxed font-medium">
                   Every day's a battlefield
                 </p>
                 <div className="flex items-center">
                   <a
-                    href="/"
+                    href="https://www.instagram.com/sid7.23?igsh=M2RkMDh3OHB4dTJr"
                     aria-label="social-link"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="mr-6 text-body-color duration-300 hover:text-yellow-600 dark:text-body-color-dark dark:hover:text-yellow-600"
+                    className="text-body-color dark:text-body-color-dark mr-6 duration-300 hover:text-yellow-600 dark:hover:text-yellow-600"
                   >
                     <svg
                       width="18"
@@ -41,11 +41,11 @@ const Footer = () => {
                     </svg>
                   </a>
                   <a
-                    href="/"
+                    href="https://www.instagram.com/sid7.23?igsh=M2RkMDh3OHB4dTJr"
                     aria-label="social-link"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="mr-6 text-body-color duration-300  hover:text-yellow-600 dark:text-body-color-dark dark:hover:text-yellow-600 "
+                    className="text-body-color dark:text-body-color-dark mr-6 duration-300 hover:text-yellow-600 dark:hover:text-yellow-600"
                   >
                     <svg
                       width="18"
@@ -63,11 +63,11 @@ const Footer = () => {
                     </svg>
                   </a>
                   <a
-                    href="/"
+                    href="https://www.instagram.com/sid7.23?igsh=M2RkMDh3OHB4dTJr"
                     aria-label="social-link"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="mr-6 text-body-color duration-300 dark:text-body-color-dark hover:text-yellow-600 dark:hover:text-yellow-600"
+                    className="text-body-color dark:text-body-color-dark mr-6 duration-300 hover:text-yellow-600 dark:hover:text-yellow-600"
                   >
                     <svg
                       width="18"
@@ -79,11 +79,11 @@ const Footer = () => {
                     </svg>
                   </a>
                   <a
-                    href="/"
+                    href="https://www.instagram.com/sid7.23?igsh=M2RkMDh3OHB4dTJr"
                     aria-label="social-link"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-body-color duration-300 dark:text-body-color-dark hover:text-yellow-600 dark:hover:text-yellow-600"
+                    className="text-body-color dark:text-body-color-dark duration-300 hover:text-yellow-600 dark:hover:text-yellow-600"
                   >
                     <svg
                       width="17"
@@ -106,24 +106,24 @@ const Footer = () => {
                 <ul>
                   <li>
                     <Link
-                      href="/blog"
-                      className="mb-4 inline-block text-base text-body-color duration-300 dark:text-body-color-dark hover:text-yellow-600 dark:hover:text-yellow-600"
+                      href="/photobooth"
+                      className="text-body-color dark:text-body-color-dark mb-4 inline-block text-base duration-300 hover:text-yellow-600 dark:hover:text-yellow-600"
                     >
-                      Blog
+                      Photoboth
                     </Link>
                   </li>
                   <li>
                     <Link
                       href="/"
-                      className="mb-4 inline-block text-base text-body-color duration-300 dark:text-body-color-dark hover:text-yellow-600 dark:hover:text-yellow-600"
+                      className="text-body-color dark:text-body-color-dark mb-4 inline-block text-base duration-300 hover:text-yellow-600 dark:hover:text-yellow-600"
                     >
-                      Pricing
+                      Memorize
                     </Link>
                   </li>
                   <li>
                     <Link
                       href="/about"
-                      className="mb-4 inline-block text-base text-body-color duration-300 dark:text-body-color-dark hover:text-yellow-600 dark:hover:text-yellow-600"
+                      className="text-body-color dark:text-body-color-dark mb-4 inline-block text-base duration-300 hover:text-yellow-600 dark:hover:text-yellow-600"
                     >
                       About
                     </Link>
@@ -141,7 +141,7 @@ const Footer = () => {
                   <li>
                     <Link
                       href="/"
-                      className="mb-4 inline-block text-base text-body-color duration-300 dark:text-body-color-dark hover:text-yellow-600 dark:hover:text-yellow-600"
+                      className="text-body-color dark:text-body-color-dark mb-4 inline-block text-base duration-300 hover:text-yellow-600 dark:hover:text-yellow-600"
                     >
                       TOS
                     </Link>
@@ -149,7 +149,7 @@ const Footer = () => {
                   <li>
                     <Link
                       href="/"
-                      className="mb-4 inline-block text-base text-body-color duration-300 dark:text-body-color-dark hover:text-yellow-600 dark:hover:text-yellow-600"
+                      className="text-body-color dark:text-body-color-dark mb-4 inline-block text-base duration-300 hover:text-yellow-600 dark:hover:text-yellow-600"
                     >
                       Privacy Policy
                     </Link>
@@ -157,7 +157,7 @@ const Footer = () => {
                   <li>
                     <Link
                       href="/"
-                      className="mb-4 inline-block text-base text-body-color duration-300 dark:text-body-color-dark hover:text-yellow-600 dark:hover:text-yellow-600"
+                      className="text-body-color dark:text-body-color-dark mb-4 inline-block text-base duration-300 hover:text-yellow-600 dark:hover:text-yellow-600"
                     >
                       Refund Policy
                     </Link>
@@ -175,7 +175,7 @@ const Footer = () => {
                   <li>
                     <Link
                       href="/contact"
-                      className="mb-4 inline-block text-base text-body-color duration-300 dark:text-body-color-dark hover:text-yellow-600 dark:hover:text-yellow-600"
+                      className="text-body-color dark:text-body-color-dark mb-4 inline-block text-base duration-300 hover:text-yellow-600 dark:hover:text-yellow-600"
                     >
                       Open Support Ticket
                     </Link>
@@ -183,17 +183,18 @@ const Footer = () => {
                   <li>
                     <Link
                       href="/"
-                      className="mb-4 inline-block text-base text-body-color duration-300 dark:text-body-color-dark hover:text-yellow-600 dark:hover:text-yellow-600"
+                      className="text-body-color dark:text-body-color-dark mb-4 inline-block text-base duration-300 hover:text-yellow-600 dark:hover:text-yellow-600"
                     >
                       Terms of Use
                     </Link>
                   </li>
                   <li>
                     <Link
-                      href="/about"
-                      className="mb-4 inline-block text-base text-body-color duration-300 dark:text-body-color-dark hover:text-yellow-600 dark:hover:text-yellow-600"
+                      href="https://hamkasite.vercel.app/"
+                      target="_blank"
+                      className="text-body-color dark:text-body-color-dark mb-4 inline-block text-base duration-300 hover:text-yellow-600 dark:hover:text-yellow-600"
                     >
-                      About
+                      Developer
                     </Link>
                   </li>
                 </ul>
@@ -202,25 +203,24 @@ const Footer = () => {
           </div>
 
           <div className="justify-center">
-            
             <Image
-            src={"/images/footer/footer.png"}
-            alt="footer"
-            width={2000}
-            height={2000}
-            className="hidden dark:block "
+              src={"/images/footer/footer.png"}
+              alt="footer"
+              width={2000}
+              height={2000}
+              className="hidden dark:block"
             />
-            
+
             <Image
-            src={"/images/footer/footer2.png"}
-            alt="footer"
-            width={2000}
-            height={2000}
-            className="block dark:hidden"
+              src={"/images/footer/footer2.png"}
+              alt="footer"
+              width={2000}
+              height={2000}
+              className="block dark:hidden"
             />
           </div>
         </div>
-        <div className="absolute right-0 top-14 z-[-1]">
+        <div className="absolute top-14 right-0 z-[-1]">
           <svg
             width="55"
             height="99"

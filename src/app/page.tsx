@@ -1,5 +1,3 @@
-
-import Blog from "@/components/Blog";
 import Brands from "@/components/photobooth";
 import ScrollUp from "@/components/Common/ScrollUp";
 import Hero from "@/components/Hero";
@@ -8,11 +6,10 @@ import { Metadata } from "next";
 import CircularGalleryDemo from "@/components/globe/circulargallery";
 import FAQAccordion from "@/components/Accordion/index";
 
-
 export const metadata: Metadata = {
-  title: "HMSI-D",
-  description: "This is Home for Startup Nextjs Template",
-  // other metadata
+  title: "HMSI-D | Home Page",
+  description:
+    "Welcome to the HMSI-D Home Page, where you can explore our latest features and updates.",
 };
 
 export default function Home() {
@@ -23,17 +20,6 @@ export default function Home() {
       <ProfileSection />
       <CircularGalleryDemo />
       <FAQAccordion />
-
-      
-      {/* <Features />
-      
-      <Brands />
-      <AboutSectionOne />
-      <AboutSectionTwo />
-      <Testimonials />
-      <Pricing />
-      <Blog />
-      <Contact /> */}
     </>
   );
 }

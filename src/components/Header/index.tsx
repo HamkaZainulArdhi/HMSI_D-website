@@ -108,40 +108,39 @@ const Header = () => {
                       {menuData.map((menuItem, index) => (
                         <li key={index} className="group relative">
                           {menuItem.path ? (
+                            // <Link
+                            //   href={menuItem.path}
+                            //   className={`flex py-2 text-sm font-medium lg:mr-0 lg:inline-flex lg:px-0 ${
+                            //     sticky ? "text-xs lg:py-1" : "lg:py-3"
+                            //   } transition-all duration-300 ${
+                            //     usePathName === menuItem.path
+                            //       ? "font-semibold text-yellow-600"
+                            //       : "text-slate-900 hover:font-semibold hover:text-slate-900 hover:[text-shadow:_0_0_40px_rgba(255,255,255,900)] dark:text-slate-300 dark:hover:text-slate-100"
+                            //   }`}
+                            // >
+                            //   {menuItem.title}
+                            // </Link>
                             <Link
                               href={menuItem.path}
-                              className={`flex py-2 text-sm font-medium lg:mr-0 lg:inline-flex lg:px-0 ${
+                              className={`group relative flex py-2 text-sm font-medium lg:mr-0 lg:inline-flex lg:px-0 ${
                                 sticky ? "text-xs lg:py-1" : "lg:py-3"
                               } transition-all duration-300 ${
                                 usePathName === menuItem.path
-                                  ? "font-semibold text-yellow-600"
-                                  : "text-slate-900 hover:font-semibold hover:text-slate-900 hover:[text-shadow:_0_0_40px_rgba(255,255,255,900)] dark:text-slate-300 dark:hover:text-slate-100"
+                                  ? "font-semibold text-yellow-600 hover:text-white"
+                                  : "rounded px-1 text-slate-900 outline-none hover:font-semibold hover:text-slate-900 active:ring-0 active:outline-none lg:hover:-rotate-5 dark:text-slate-300 dark:hover:text-slate-100"
                               }`}
                             >
-                              {menuItem.title}
+                              {/* Circle background on hover */}
+                              <span
+                                className={`absolute inset-0 z-0 m-auto h-8 w-8 scale-0 rounded-full bg-yellow-600 opacity-0 transition-all duration-300 group-hover:scale-125 group-hover:opacity-100`}
+                              ></span>
+
+                              {/* Text should be above the background */}
+                              <span className="relative z-10">
+                                {menuItem.title}
+                              </span>
                             </Link>
                           ) : (
-                            // <Link
-                            // href={menuItem.path}
-                            // className={`group relative flex py-2 text-sm font-medium lg:mr-0 lg:inline-flex lg:px-0 ${
-                            //   sticky ? "text-xs lg:py-1" : "lg:py-3"
-                            // } transition-all duration-300 ${
-                            //   usePathName === menuItem.path
-                            //     ? "-rotate-5 font-semibold text-yellow-600"
-                            //     : "rounded px-1 text-slate-900 outline-none hover:font-semibold hover:text-slate-900 active:ring-0 active:outline-none lg:hover:-rotate-5 dark:text-slate-300 dark:hover:text-slate-100"
-                            // }`}
-                            // >
-                            // {menuItem.title}
-
-                            // {/* Underline: full width if active, animate on hover */}
-                            // <span
-                            //   className={`absolute bottom-2 left-0 z-10 h-2 skew-x-12 bg-yellow-600 transition-all duration-500 ease-out ${
-                            //     usePathName === menuItem.path
-                            //       ? "w-full -rotate-1"
-                            //       : "w-0 group-hover:w-full"
-                            //   }`}
-                            // ></span>
-                            // </Link>
                             <>
                               <p
                                 onClick={() => handleSubmenu(index)}

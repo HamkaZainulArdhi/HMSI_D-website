@@ -2,6 +2,7 @@
 import React from "react";
 import Image from "next/image";
 import { HoverBorderGradient } from "@/components/feedIG/moving-border";
+import UnderlineText from "@/components/ui/underlinetext";
 
 export default function ProfileSectionAbout() {
   const galleryImages = [
@@ -22,29 +23,16 @@ export default function ProfileSectionAbout() {
       >
         About us
       </h1>
-      <Image
-        src="/images/about/list.png"
-        alt="list bottom"
-        className="mx-auto mb-2 hidden items-center dark:block"
-        width={300}
-        height={100}
-      />
-      <Image
-        src="/images/about/listHITAM.png"
-        alt="list bottom"
-        className="mx-auto mb-2 block items-center dark:hidden"
-        width={300}
-        height={100}
-      />
-      <div className="flex max-w-7xl items-start">
+      <UnderlineText />
+      <div className="flex max-w-7xl items-start text-sm">
         <Image
           src="/images/about/glint.png"
           alt="Profile Image"
           width={100}
           height={100}
-          className="-mt-3"
+          className="-mt-3 hidden lg:block"
         />
-        <p className="ml-auto max-w-5xl text-justify text-[18px] text-slate-600 dark:text-slate-300">
+        <p className="ml-auto max-w-5xl text-justify text-slate-600 lg:text-[18px] dark:text-slate-300">
           Gorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
           vulputate libero et velit interdum, ac aliquet odio mattis. Class
           aptent taciti sociosqu ad litora torquent per conubia nostra, per
@@ -52,7 +40,7 @@ export default function ProfileSectionAbout() {
           dalam segala aspek perkuliahan 4 tahun kita harus lulus semua amiien.
         </p>
       </div>
-      <p className="e mb-8 text-justify text-[18px] text-slate-600 dark:text-slate-300">
+      <p className="mb-8 text-justify text-sm text-slate-600 lg:text-[18px] dark:text-slate-300">
         Worem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate
         libero et velit interdum, ac aliquet odio mattis. Class aptent taciti
         sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
@@ -60,7 +48,6 @@ export default function ProfileSectionAbout() {
         efficitur neque. Ut diam quam, semper iaculis condimentum ac, vestibulum
         eu temanan.
       </p>
-
       <HoverBorderGradient className="border-slate-100 bg-slate-100 dark:border-slate-600 dark:bg-[#202020]">
         {/* Profile Header */}
         <div className="flex items-center justify-between p-7">
@@ -83,7 +70,7 @@ export default function ProfileSectionAbout() {
             </div>
           </div>
           <a
-            href="#"
+            href="https://www.instagram.com/sid7.23?igsh=M2RkMDh3OHB4dTJr"
             className="ml-2 inline-flex transform items-center justify-center rounded-lg border border-black bg-transparent py-2 text-xs font-bold text-black shadow-[0_0_0_3px_#000000_inset] transition duration-300 hover:-translate-y-1 sm:px-6 sm:py-2 sm:text-base dark:border-white dark:text-white"
           >
             <span className="mx-1">+</span> Get in touch{" "}

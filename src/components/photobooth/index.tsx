@@ -1,6 +1,7 @@
 "use client";
 import React, { useEffect, useRef, useState } from "react";
 import { Camera, RotateCcw, Download } from "lucide-react";
+import UnderlineText from "../ui/underlinetext";
 
 interface PhotoProps {
   img: HTMLImageElement;
@@ -459,11 +460,7 @@ const Photobooth: React.FC = () => {
           >
             Snap Station
           </h1>
-          <img
-            src="/images/about/list.png"
-            alt="list bottom"
-            className="mx-auto mb-2 items-center"
-          />
+          <UnderlineText />
           <p className="dark:text-whitecus text-xl font-light text-black">
             Create beautiful photo strips with friends and family
           </p>
