@@ -17,7 +17,7 @@ const Footer = () => {
                   <div className="h-[3px] w-[85px] bg-gray-400 dark:bg-gray-600"></div>
                 </div>
                 <p className="text-body-color dark:text-body-color-dark mb-8 text-2xl leading-relaxed font-medium">
-                  Every day's a battlefield
+                  Every day&apos;s a battlefield
                 </p>
                 <div className="flex items-center">
                   <a
