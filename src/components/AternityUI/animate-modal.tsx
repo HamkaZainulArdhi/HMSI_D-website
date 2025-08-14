@@ -19,26 +19,26 @@ export function AnimatedModalDemo() {
     "https://images.unsplash.com/photo-1546484475-7f7bd55792da?q=80&w=2581&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   ];
   return (
-    <div className="py-40  flex items-center justify-center">
+    <div className="ini mah cuma buat komit flex items-center justify-center py-40">
       <Modal>
-        <ModalTrigger className="bg-black dark:bg-white dark:text-black text-white flex justify-center group/modal-btn">
-          <span className="group-hover/modal-btn:translate-x-40 text-center transition duration-500">
+        <ModalTrigger className="group/modal-btn flex justify-center bg-black text-white dark:bg-white dark:text-black">
+          <span className="text-center transition duration-500 group-hover/modal-btn:translate-x-40">
             Book your flight
           </span>
-          <div className="-translate-x-40 group-hover/modal-btn:translate-x-0 flex items-center justify-center absolute inset-0 transition duration-500 text-white z-20">
+          <div className="absolute inset-0 z-20 flex -translate-x-40 items-center justify-center text-white transition duration-500 group-hover/modal-btn:translate-x-0">
             ✈️
           </div>
         </ModalTrigger>
         <ModalBody>
           <ModalContent>
-            <h4 className="text-lg md:text-2xl text-neutral-600 dark:text-neutral-100 font-bold text-center mb-8">
+            <h4 className="mb-8 text-center text-lg font-bold text-neutral-600 md:text-2xl dark:text-neutral-100">
               Book your trip to{" "}
-              <span className="px-1 py-0.5 rounded-md bg-gray-100 dark:bg-neutral-800 dark:border-neutral-700 border border-gray-200">
+              <span className="rounded-md border border-gray-200 bg-gray-100 px-1 py-0.5 dark:border-neutral-700 dark:bg-neutral-800">
                 Bali
               </span>{" "}
               now! ✈️
             </h4>
-            <div className="flex justify-center items-center">
+            <div className="flex items-center justify-center">
               {images.map((image, idx) => (
                 <motion.div
                   key={"images" + idx}
@@ -55,62 +55,62 @@ export function AnimatedModalDemo() {
                     rotate: 0,
                     zIndex: 100,
                   }}
-                  className="rounded-xl -mr-4 mt-4 p-1 bg-white dark:bg-neutral-800 dark:border-neutral-700 border border-neutral-100 shrink-0 overflow-hidden"
+                  className="mt-4 -mr-4 shrink-0 overflow-hidden rounded-xl border border-neutral-100 bg-white p-1 dark:border-neutral-700 dark:bg-neutral-800"
                 >
                   <img
                     src={image}
                     alt="bali images"
                     width="500"
                     height="500"
-                    className="rounded-lg h-20 w-20 md:h-40 md:w-40 object-cover shrink-0"
+                    className="h-20 w-20 shrink-0 rounded-lg object-cover md:h-40 md:w-40"
                   />
                 </motion.div>
               ))}
             </div>
-            <div className="py-10 flex flex-wrap gap-x-4 gap-y-6 items-start justify-start max-w-sm mx-auto">
-              <div className="flex  items-center justify-center">
-                <PlaneIcon className="mr-1 text-neutral-700 dark:text-neutral-300 h-4 w-4" />
-                <span className="text-neutral-700 dark:text-neutral-300 text-sm">
+            <div className="mx-auto flex max-w-sm flex-wrap items-start justify-start gap-x-4 gap-y-6 py-10">
+              <div className="flex items-center justify-center">
+                <PlaneIcon className="mr-1 h-4 w-4 text-neutral-700 dark:text-neutral-300" />
+                <span className="text-sm text-neutral-700 dark:text-neutral-300">
                   5 connecting flights
                 </span>
               </div>
               <div className="flex items-center justify-center">
-                <ElevatorIcon className="mr-1 text-neutral-700 dark:text-neutral-300 h-4 w-4" />
-                <span className="text-neutral-700 dark:text-neutral-300 text-sm">
+                <ElevatorIcon className="mr-1 h-4 w-4 text-neutral-700 dark:text-neutral-300" />
+                <span className="text-sm text-neutral-700 dark:text-neutral-300">
                   12 hotels
                 </span>
               </div>
               <div className="flex items-center justify-center">
-                <VacationIcon className="mr-1 text-neutral-700 dark:text-neutral-300 h-4 w-4" />
-                <span className="text-neutral-700 dark:text-neutral-300 text-sm">
+                <VacationIcon className="mr-1 h-4 w-4 text-neutral-700 dark:text-neutral-300" />
+                <span className="text-sm text-neutral-700 dark:text-neutral-300">
                   69 visiting spots
                 </span>
               </div>
-              <div className="flex  items-center justify-center">
-                <FoodIcon className="mr-1 text-neutral-700 dark:text-neutral-300 h-4 w-4" />
-                <span className="text-neutral-700 dark:text-neutral-300 text-sm">
+              <div className="flex items-center justify-center">
+                <FoodIcon className="mr-1 h-4 w-4 text-neutral-700 dark:text-neutral-300" />
+                <span className="text-sm text-neutral-700 dark:text-neutral-300">
                   Good food everyday
                 </span>
               </div>
               <div className="flex items-center justify-center">
-                <MicIcon className="mr-1 text-neutral-700 dark:text-neutral-300 h-4 w-4" />
-                <span className="text-neutral-700 dark:text-neutral-300 text-sm">
+                <MicIcon className="mr-1 h-4 w-4 text-neutral-700 dark:text-neutral-300" />
+                <span className="text-sm text-neutral-700 dark:text-neutral-300">
                   Open Mic
                 </span>
               </div>
               <div className="flex items-center justify-center">
-                <ParachuteIcon className="mr-1 text-neutral-700 dark:text-neutral-300 h-4 w-4" />
-                <span className="text-neutral-700 dark:text-neutral-300 text-sm">
+                <ParachuteIcon className="mr-1 h-4 w-4 text-neutral-700 dark:text-neutral-300" />
+                <span className="text-sm text-neutral-700 dark:text-neutral-300">
                   Paragliding
                 </span>
               </div>
             </div>
           </ModalContent>
           <ModalFooter className="gap-4">
-            <button className="px-2 py-1 bg-gray-200 text-black dark:bg-black dark:border-black dark:text-white border border-gray-300 rounded-md text-sm w-28">
+            <button className="w-28 rounded-md border border-gray-300 bg-gray-200 px-2 py-1 text-sm text-black dark:border-black dark:bg-black dark:text-white">
               Cancel
             </button>
-            <button className="bg-black text-white dark:bg-white dark:text-black text-sm px-2 py-1 rounded-md border border-black w-28">
+            <button className="w-28 rounded-md border border-black bg-black px-2 py-1 text-sm text-white dark:bg-white dark:text-black">
               Book Now
             </button>
           </ModalFooter>

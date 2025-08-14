@@ -24,7 +24,6 @@ export default function GridBackground({ children }) {
           }}
         />
 
-        {/* Additional blur gradient for more pronounced oval effect */}
         <div
           className="bg-whitecus pointer-events-none absolute inset-0 dark:bg-black"
           style={{
