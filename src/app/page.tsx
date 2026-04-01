@@ -5,6 +5,7 @@ import ProfileSection from "@/components/feedIG/MovingBorder";
 import { Metadata } from "next";
 import CircularGalleryDemo from "@/components/globe/circulargallery";
 import FAQAccordion from "@/components/Accordion/index";
+import Head from "@/components/aboutclass/head";
 
 export const metadata: Metadata = {
   title: "HMSI-D | Home Page",
@@ -17,6 +18,8 @@ export default function Home() {
     <>
       <ScrollUp />
       <Hero />
+      {/* <AboutClass /> */}
+      <Head />
       <ProfileSection />
       <CircularGalleryDemo />
       <FAQAccordion />

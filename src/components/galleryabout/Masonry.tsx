@@ -4,7 +4,6 @@ import { useTransition, a } from "@react-spring/web";
 
 interface MasonryItem {
   id: string | number;
-  height: number;
   image: string;
 }
 
@@ -55,18 +54,21 @@ function Masonry({ data }: MasonryProps) {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
+  // All items have the same height for simplicity, or you can set a fixed height
+  const defaultHeight = 200;
   const [heights, gridItems] = useMemo<[number[], GridItem[]]>(() => {
     const heights = new Array(columns).fill(0);
     const gridItems = data.map((child) => {
       const column = heights.indexOf(Math.min(...heights));
       const x = (width / columns) * column;
-      const y = (heights[column] += child.height / 2) - child.height / 2;
+      const y = heights[column];
+      heights[column] += defaultHeight;
       return {
         ...child,
         x,
         y,
         width: width / columns,
-        height: child.height / 2,
+        height: defaultHeight,
       };
     });
     return [heights, gridItems];

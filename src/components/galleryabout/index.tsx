@@ -3,16 +3,16 @@ import Masonry from "./Masonry";
 import React from "react";
 
 const data = [
-  { id: 1, image: "/images/heroimage/1.png", height: 400 },
-  { id: 2, image: "/images/heroimage/2.png", height: 300 },
-  { id: 3, image: "/images/heroimage/3.png", height: 300 },
-  { id: 4, image: "/images/heroimage/4.png", height: 400 },
-  { id: 5, image: "/images/heroimage/5.png", height: 400 },
-  { id: 6, image: "/images/heroimage/6.png", height: 300 },
-  { id: 7, image: "/images/gallery/1.jpg", height: 400 },
-  { id: 8, image: "https://picsum.photos/id/39/200/300", height: 300 },
-  { id: 9, image: "https://picsum.photos/id/85/200/300", height: 200 },
-  { id: 10, image: "https://picsum.photos/id/103/200/300", height: 400 },
+  { id: 1, image: "/images/heroimage/1.png" },
+  { id: 2, image: "/images/heroimage/2.png" },
+  { id: 3, image: "/images/heroimage/3.png" },
+  { id: 4, image: "/images/heroimage/4.png" },
+  { id: 5, image: "/images/heroimage/5.png" },
+  { id: 6, image: "/images/heroimage/6.png" },
+  { id: 7, image: "/images/gallery/1.jpg" },
+  { id: 8, image: "https://picsum.photos/id/39/200/300" },
+  { id: 9, image: "https://picsum.photos/id/85/200/300" },
+  { id: 10, image: "https://picsum.photos/id/103/200/300" },
 ];
 
 export default function GalleryPage() {

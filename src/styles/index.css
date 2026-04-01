@@ -146,3 +146,7 @@
 .text-poppins {
   font-family: var(--poppins-font), sans-serif;
 }
+
+.garis{
+  border: 3px solid var(--color-red-700);
+}
