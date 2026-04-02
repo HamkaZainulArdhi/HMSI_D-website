@@ -43,12 +43,11 @@ const ChromaGridHead: React.FC<ChromaGridProps> = ({
   const demo: ChromaItem[] = [
     {
       image: "/images/team/busarah.jpg",
-      title: "Sarah Astiti S.kom., M.Kom.",
+      title: "Sarah Astiti S.kom., M.MT.",
       subtitle: "",
       handle: "Dosen Wali",
       borderColor: "#4F46E5",
       gradient: "linear-gradient(145deg,#4F46E5,#000)",
-
     },
     {
       image: "/images/team/habib2.jpg",
@@ -57,7 +56,6 @@ const ChromaGridHead: React.FC<ChromaGridProps> = ({
       handle: "Komandan Tingkat Kelas",
       borderColor: "#10B981",
       gradient: "linear-gradient(210deg,#10B981,#000)",
-
     },
   ];
 
@@ -118,7 +116,7 @@ const ChromaGridHead: React.FC<ChromaGridProps> = ({
       ref={rootRef}
       onPointerMove={handleMove}
       onPointerLeave={handleLeave}
-      className={`relative flex w-full items-center justify-between gap-8 px-8 pt-27 pb-15 ${className}`}
+      className={`relative flex w-full flex-col items-center justify-between gap-4 px-4 py-20 md:flex-row md:gap-6 md:px-0 md:pt-24 md:pb-12 lg:gap-8 lg:px-8 lg:pt-27 lg:pb-15 ${className}`}
       style={
         {
           "--r": `${radius}px`,
@@ -132,7 +130,7 @@ const ChromaGridHead: React.FC<ChromaGridProps> = ({
         <article
           onMouseMove={handleCardMove}
           onClick={() => handleCardClick(data[0].url)}
-          className="group relative flex w-[300px] cursor-pointer flex-col overflow-hidden rounded-[20px] border-2 border-transparent text-center transition-colors duration-300"
+          className="group relative flex cursor-pointer flex-col overflow-hidden rounded-[15px] border-2 border-transparent text-center transition-colors duration-300 sm:w-[200px] md:w-[300px] md:rounded-[20px] lg:w-[300px]"
           style={
             {
               "--card-border": data[0].borderColor || "transparent",
@@ -157,32 +155,34 @@ const ChromaGridHead: React.FC<ChromaGridProps> = ({
             />
           </div>
           <footer className="relative z-10 flex flex-col gap-1 p-3 font-sans text-white">
-            <h3 className="m-0 text-[1.05rem] font-semibold">
+            <h3 className="m-0 text-[0.95rem] font-semibold md:text-[1.05rem]">
               {data[0].title}
             </h3>
 
             {data[0].handle && (
-              <span className="text-[0.95rem] opacity-80">
+              <span className="text-[0.85rem] opacity-80 md:text-[0.95rem]">
                 {data[0].handle}
               </span>
             )}
 
-            <p className="m-0 text-[0.85rem] opacity-85">{data[0].subtitle}</p>
+            <p className="m-0 text-[0.75rem] opacity-85 md:text-[0.85rem]">
+              {data[0].subtitle}
+            </p>
           </footer>
         </article>
       )}
 
-      {/* Center Text */}
-      <div className="flex flex-1 flex-col items-center self-start text-center">
+      {/* Center Text - Mobile: First, Tablet+: Middle */}
+      <div className="order-first flex w-full flex-1 flex-col items-center justify-center text-center md:order-none md:w-auto">
         <h1
           style={{ fontFamily: "Playfair Display" }}
-          className="text-5xl font-bold text-slate-900 dark:text-white"
+          className="text-2xl font-bold text-slate-900 sm:text-3xl md:text-4xl lg:text-5xl dark:text-white"
         >
           Our Team
         </h1>
         <UnderlineText />
 
-        <p className="text-md text-slate-600 dark:text-slate-300">
+        <p className="max-w-xs text-xs text-slate-600 sm:max-w-sm sm:text-sm md:max-w-md md:text-base lg:max-w-lg lg:text-lg dark:text-slate-300">
           Isi pikiranku kamu Jadi terlalu banyak buang waktu Dari atas sampai
           bawah, anggun Baby know that I just wanna be with you, uh Siang-siang
           kepikiran Malam-malam sendirian Scrolling Tik-Tok feednya isi
@@ -195,7 +195,7 @@ const ChromaGridHead: React.FC<ChromaGridProps> = ({
         <article
           onMouseMove={handleCardMove}
           onClick={() => handleCardClick(data[1].url)}
-          className="group relative flex w-[300px] cursor-pointer flex-col overflow-hidden rounded-[20px] border-2 border-transparent text-center transition-colors duration-300"
+          className="group relative flex cursor-pointer flex-col overflow-hidden rounded-[15px] border-2 border-transparent text-center transition-colors duration-300 sm:w-[200px] md:w-[300px] md:rounded-[20px] lg:w-[300px]"
           style={
             {
               "--card-border": data[1].borderColor || "transparent",
@@ -220,17 +220,19 @@ const ChromaGridHead: React.FC<ChromaGridProps> = ({
             />
           </div>
           <footer className="relative z-10 flex flex-col gap-1 p-3 font-sans text-white">
-            <h3 className="m-0 text-[1.05rem] font-semibold">
+            <h3 className="m-0 text-[0.95rem] font-semibold md:text-[1.05rem]">
               {data[1].title}
             </h3>
 
             {data[1].handle && (
-              <span className="text-[0.95rem] opacity-80">
+              <span className="text-[0.85rem] opacity-80 md:text-[0.95rem]">
                 {data[1].handle}
               </span>
             )}
 
-            <p className="m-0 text-[0.85rem] opacity-85">{data[1].subtitle}</p>
+            <p className="m-0 text-[0.75rem] opacity-85 md:text-[0.85rem]">
+              {data[1].subtitle}
+            </p>
           </footer>
         </article>
       )}

@@ -10,9 +10,20 @@ const data = [
   { id: 5, image: "/images/heroimage/5.png" },
   { id: 6, image: "/images/heroimage/6.png" },
   { id: 7, image: "/images/gallery/1.jpg" },
-  { id: 8, image: "https://picsum.photos/id/39/200/300" },
-  { id: 9, image: "https://picsum.photos/id/85/200/300" },
-  { id: 10, image: "https://picsum.photos/id/103/200/300" },
+  { id: 8, image: "/images/gallery/2.jpg" },
+  { id: 9, image: "/images/gallery/3.jpg" },
+  { id: 10, image: "/images/gallery/4.jpg" },
+  { id: 11, image: "/images/gallery/5.jpg" },
+  { id: 12, image: "/images/gallery/6.jpg" },
+  { id: 13, image: "/images/gallery/7.jpg" },
+  { id: 14, image: "/images/gallery/8.jpg" },
+  { id: 15, image: "/images/gallery/9.jpg" },
+  { id: 16, image: "/images/gallery/10.jpg" },
+  { id: 17, image: "/images/gallery/11.jpg" },
+  { id: 18, image: "/images/gallery/12.jpg" },
+  { id: 19, image: "/images/gallery/13.jpg" },
+  { id: 20, image: "/images/gallery/14.jpg" },
+
 ];
 
 export default function GalleryPage() {

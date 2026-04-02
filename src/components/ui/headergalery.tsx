@@ -61,7 +61,7 @@ export default function ScatteredImageGallery({ className }) {
           <div
             key={index}
             className={cn(
-              "absolute shadow-md bg-amber-50 rounded-sm overflow-hidden opacity-90 hover:opacity-100 cursor-follow-image",
+              "absolute shadow-md rounded-sm overflow-hidden opacity-90 hover:opacity-100 cursor-follow-image",
               img.className
             )}
             style={{

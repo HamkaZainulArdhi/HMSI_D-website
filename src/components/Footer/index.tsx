@@ -5,7 +5,7 @@ import Link from "next/link";
 const Footer = () => {
   return (
     <>
-      <footer className="dark:bg-greyfooter relative z-10 bg-white pt-16 mt-20 shadow-[0_-4px_10px_rgba(0,0,0,0.1)] md:pt-20 lg:pt-24">
+      <footer className="dark:bg-greyfooter relative z-10 mt-20 bg-white pt-16 shadow-[0_-4px_10px_rgba(0,0,0,0.1)] md:pt-20 lg:pt-24">
         <div className="container">
           <div className="-mx-4 flex flex-wrap">
             <div className="w-full px-4 md:w-1/2 lg:w-4/12 xl:w-5/12">
@@ -106,18 +106,10 @@ const Footer = () => {
                 <ul>
                   <li>
                     <Link
-                      href="/photobooth"
-                      className="text-body-color dark:text-body-color-dark mb-4 inline-block text-base duration-300 hover:text-yellow-600 dark:hover:text-yellow-600"
-                    >
-                      Photoboth
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
                       href="/"
                       className="text-body-color dark:text-body-color-dark mb-4 inline-block text-base duration-300 hover:text-yellow-600 dark:hover:text-yellow-600"
                     >
-                      Memorize
+                      Home
                     </Link>
                   </li>
                   <li>
@@ -126,6 +118,22 @@ const Footer = () => {
                       className="text-body-color dark:text-body-color-dark mb-4 inline-block text-base duration-300 hover:text-yellow-600 dark:hover:text-yellow-600"
                     >
                       About
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/photobooth"
+                      className="text-body-color dark:text-body-color-dark mb-4 inline-block text-base duration-300 hover:text-yellow-600 dark:hover:text-yellow-600"
+                    >
+                      Photobooth
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/team"
+                      className="text-body-color dark:text-body-color-dark mb-4 inline-block text-base duration-300 hover:text-yellow-600 dark:hover:text-yellow-600"
+                    >
+                      Our Team
                     </Link>
                   </li>
                 </ul>
@@ -140,7 +148,15 @@ const Footer = () => {
                 <ul>
                   <li>
                     <Link
-                      href="/"
+                      href="https://igracias.telkomuniversity.ac.id/"
+                      className="text-body-color dark:text-body-color-dark mb-4 inline-block text-base duration-300 hover:text-yellow-600 dark:hover:text-yellow-600"
+                    >
+                      Igracias
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="https://toss.telkomuniversity.ac.id/"
                       className="text-body-color dark:text-body-color-dark mb-4 inline-block text-base duration-300 hover:text-yellow-600 dark:hover:text-yellow-600"
                     >
                       TOS
@@ -148,18 +164,10 @@ const Footer = () => {
                   </li>
                   <li>
                     <Link
-                      href="/"
+                      href="https://situ-kem.telkomuniversity.ac.id/"
                       className="text-body-color dark:text-body-color-dark mb-4 inline-block text-base duration-300 hover:text-yellow-600 dark:hover:text-yellow-600"
                     >
-                      Privacy Policy
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href="/"
-                      className="text-body-color dark:text-body-color-dark mb-4 inline-block text-base duration-300 hover:text-yellow-600 dark:hover:text-yellow-600"
-                    >
-                      Refund Policy
+                      Situkema
                     </Link>
                   </li>
                 </ul>
@@ -174,23 +182,23 @@ const Footer = () => {
                 <ul>
                   <li>
                     <Link
-                      href="/contact"
+                      href="https://lms.telkomuniversity.ac.id/"
                       className="text-body-color dark:text-body-color-dark mb-4 inline-block text-base duration-300 hover:text-yellow-600 dark:hover:text-yellow-600"
                     >
-                      Open Support Ticket
+                      Celeo
                     </Link>
                   </li>
                   <li>
                     <Link
-                      href="/"
+                      href="https://www.instagram.com/habibbb03_?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
                       className="text-body-color dark:text-body-color-dark mb-4 inline-block text-base duration-300 hover:text-yellow-600 dark:hover:text-yellow-600"
                     >
-                      Terms of Use
+                      Designer
                     </Link>
                   </li>
                   <li>
                     <Link
-                      href="https://hamkasite.vercel.app/"
+                      href="https://hamkacv.vercel.app/"
                       target="_blank"
                       className="text-body-color dark:text-body-color-dark mb-4 inline-block text-base duration-300 hover:text-yellow-600 dark:hover:text-yellow-600"
                     >

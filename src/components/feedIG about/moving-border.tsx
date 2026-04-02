@@ -5,23 +5,25 @@ import { cn } from "@/lib/utils";
 
 type Direction = "TOP" | "LEFT" | "BOTTOM" | "RIGHT";
 
-export function HoverBorderGradient({
-  children,
-  containerClassName,
-  className,
-  as: Tag = "div",
-  duration = 1,
-  clockwise = true,
-  rounded = "1rem",
-  ...props
-}: React.PropsWithChildren<{
-  as?: React.ElementType;
+type HoverBorderGradientProps<E extends React.ElementType> = {
+  as?: E;
   containerClassName?: string;
   className?: string;
   duration?: number;
   clockwise?: boolean;
   rounded?: string;
-} & React.HTMLAttributes<HTMLElement>>) {
+} & React.ComponentPropsWithoutRef<E>;
+
+export function HoverBorderGradient<E extends React.ElementType = "div">({
+  children,
+  containerClassName,
+  className,
+  as: Tag,
+  duration = 1,
+  clockwise = true,
+  rounded = "1rem",
+  ...props
+}: React.PropsWithChildren<HoverBorderGradientProps<E>>) {
   const [hovered, setHovered] = useState(false);
   const [direction, setDirection] = useState<Direction>("TOP");
 
@@ -36,8 +38,10 @@ export function HoverBorderGradient({
   const movingMap: Record<Direction, string> = {
     TOP: "radial-gradient(20.7% 50% at 50% 0%, white 0%, transparent 100%)",
     LEFT: "radial-gradient(16.6% 43.1% at 0% 50%, white 0%, transparent 100%)",
-    BOTTOM: "radial-gradient(20.7% 50% at 50% 100%, white 0%, transparent 100%)",
-    RIGHT: "radial-gradient(16.2% 41.2% at 100% 50%, white 0%, transparent 100%)",
+    BOTTOM:
+      "radial-gradient(20.7% 50% at 50% 100%, white 0%, transparent 100%)",
+    RIGHT:
+      "radial-gradient(16.2% 41.2% at 100% 50%, white 0%, transparent 100%)",
   };
 
   const highlight =
@@ -52,18 +56,21 @@ export function HoverBorderGradient({
     }
   }, [hovered]);
 
+  const Component = Tag || "div";
+
   return (
-    <Tag
+    <Component
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
       className={cn(
         "relative overflow-visible p-px transition duration-500",
-        containerClassName
+        containerClassName,
       )}
-      style={{ borderRadius: rounded,
+      style={{
+        borderRadius: rounded,
         // outline: "1px solid rgba(255, 255, 255, 0.4)"
-       }}
-      {...props}
+      }}
+      {...(props as any)}
     >
       {/* Layer Background Blur Border */}
       <motion.div
@@ -87,7 +94,6 @@ export function HoverBorderGradient({
         style={{
           backgroundColor: "black",
           borderRadius: `calc(${rounded} - 2px)`,
-          
         }}
       />
 
@@ -98,6 +104,6 @@ export function HoverBorderGradient({
       >
         {children}
       </div>
-    </Tag>
+    </Component>
   );
 }

@@ -56,52 +56,51 @@ export function HoverBorderGradient({
     }
   }, [hovered]);
 
-  return (
-    <Tag
-      onMouseEnter={() => setHovered(true)}
-      onMouseLeave={() => setHovered(false)}
-      className={cn(
+  return React.createElement(
+    Tag,
+    {
+      onMouseEnter: () => setHovered(true),
+      onMouseLeave: () => setHovered(false),
+      className: cn(
         "relative overflow-visible p-px transition duration-500",
         containerClassName,
-      )}
-      style={{
+      ),
+      style: {
         borderRadius: rounded,
-        // outline: "2px solid rgba(156, 163, 175, 1) dark:outline-none",
-      }}
-      {...props}
-    >
-      {/* Layer Background Blur Border */}
-      <motion.div
-        className="absolute inset-0 z-0"
-        style={{
-          borderRadius: rounded,
-          filter: "blur(4px)",
-        }}
-        initial={{ background: movingMap[direction] }}
-        animate={{
-          background: hovered
-            ? [movingMap[direction], highlight]
-            : movingMap[direction],
-        }}
-        transition={{ ease: "linear", duration }}
-      />
-
-      {/* Background Layer */}
-      <div
-        className="absolute inset-[2px] z-1"
-        style={{
-          backgroundColor: "black",
-          borderRadius: `calc(${rounded} - 2px)`,
-        }}
-      />
-
-      {/* Children Content */}
-      <div
-        className={cn("relative z-10 text-white", className)}
-        style={{ borderRadius: `calc(${rounded} - 2px)` }}
-      >
-        {children}
-      </div>
-    </Tag>
+      },
+      ...props,
+    },
+    /* Layer Background Blur Border */
+    React.createElement(motion.div, {
+      className: "absolute inset-0 z-0",
+      style: {
+        borderRadius: rounded,
+        filter: "blur(4px)",
+      },
+      initial: { background: movingMap[direction] },
+      animate: {
+        background: hovered
+          ? [movingMap[direction], highlight]
+          : movingMap[direction],
+      },
+      transition: { ease: "linear", duration },
+    }),
+    /* Background Layer */
+    React.createElement("div", {
+      className: "absolute inset-[2px] z-1",
+      style: {
+        backgroundColor: "black",
+        borderRadius: `calc(${rounded} - 2px)`,
+      },
+    }),
+    /* Children Content */
+    React.createElement(
+      "div",
+      {
+        className: cn("relative z-10 text-white", className),
+        style: { borderRadius: `calc(${rounded} - 2px)` },
+      },
+      children,
+    ),
   );
 }

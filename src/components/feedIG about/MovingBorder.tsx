@@ -114,7 +114,7 @@ export default function ProfileSectionAbout() {
           </div>
 
           {/* Bottom Text */}
-          <p className="mt-8 border-1 border-white text-center text-xs text-slate-600 sm:text-base dark:text-slate-300">
+          <p className="mt-8  text-center text-xs text-slate-600 sm:text-base dark:text-slate-300">
             We’re a team of future changemakers. or at least that’s what we told
             the lecturers. Some came for the knowledge… the rest just to get
             attendance

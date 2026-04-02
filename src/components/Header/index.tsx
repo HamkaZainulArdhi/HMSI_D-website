@@ -98,10 +98,10 @@ const Header = () => {
                   </button>
                   <nav
                     id="navbarCollapse"
-                    className={`navbar bg-whitebg absolute right-0 z-30 w-[250px] rounded-xl border-[.5px] border-white px-6 py-4 duration-300 lg:visible lg:static lg:w-auto lg:border-none lg:!bg-transparent lg:p-0 lg:opacity-100 ${
+                    className={`navbar absolute bg-white dark:bg-[#161616] right-0 z-30 w-[250px] rounded-xl border-[.5px] border-white  px-6 py-4 duration-300 lg:visible lg:static lg:w-auto lg:border-none lg:!bg-transparent lg:p-0 lg:opacity-100 ${
                       navbarOpen
                         ? "visibility top-full opacity-100"
-                        : "invisible top-[120%] opacity-0"
+                        : "invisible top-[120%] opacity-0 "
                     }`}
                   >
                     <ul className="block lg:flex lg:space-x-8">
@@ -122,7 +122,7 @@ const Header = () => {
                             // </Link>
                             <Link
                               href={menuItem.path}
-                              className={`group relative flex py-2 text-sm font-medium lg:mr-0 lg:inline-flex lg:px-0 ${
+                              className={`group relative  flex py-2 text-sm font-medium lg:mr-0 lg:inline-flex lg:px-0 ${
                                 sticky ? "text-xs lg:py-1" : "lg:py-3"
                               } transition-all duration-300 ${
                                 usePathName === menuItem.path
@@ -185,9 +185,15 @@ const Header = () => {
                         </li>
                       ))}
                     </ul>
+                    {/* Theme Toggler for Mobile */}
+                    <div className="mt-4 border-t border-slate-300 pt-4 lg:hidden">
+                      <ThemeToggler />
+                    </div>
                   </nav>
                 </div>
-                <ThemeToggler />
+                <div className="hidden lg:block">
+                  <ThemeToggler />
+                </div>
               </div>
             </div>
           </div>

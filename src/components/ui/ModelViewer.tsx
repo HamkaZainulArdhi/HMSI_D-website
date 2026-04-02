@@ -5,6 +5,8 @@ import {
   useLayoutEffect,
   useEffect,
   useMemo,
+  useState,
+  useCallback,
 } from "react";
 import {
   Canvas,
@@ -135,7 +137,72 @@ interface ModelInnerProps {
   onLoaded?: () => void;
 }
 
-const ModelInner: FC<ModelInnerProps> = ({
+// Sub-components for each model format to avoid hooks-in-useMemo violation
+const GLTFLoader: FC<{
+  url: string;
+  onReady: (obj: THREE.Object3D) => void;
+}> = ({ url, onReady }) => {
+  const { scene } = useGLTF(url);
+  useEffect(() => {
+    onReady(scene.clone());
+  }, [scene, onReady]);
+  return null;
+};
+
+const FBXLoader: FC<{
+  url: string;
+  onReady: (obj: THREE.Object3D) => void;
+}> = ({ url, onReady }) => {
+  const obj = useFBX(url);
+  useEffect(() => {
+    onReady(obj.clone());
+  }, [obj, onReady]);
+  return null;
+};
+
+const OBJModelLoader: FC<{
+  url: string;
+  onReady: (obj: THREE.Object3D) => void;
+}> = ({ url, onReady }) => {
+  const obj = useLoader(OBJLoader, url);
+  useEffect(() => {
+    onReady((obj as THREE.Object3D).clone());
+  }, [obj, onReady]);
+  return null;
+};
+
+const ModelInnerWrapper: FC<ModelInnerProps> = (props) => {
+  const [content, setContent] = useState<THREE.Object3D | null>(null);
+  const ext = useMemo(
+    () => props.url.split(".").pop()!.toLowerCase(),
+    [props.url],
+  );
+
+  const handleModelReady = useCallback((obj: THREE.Object3D) => {
+    setContent(obj);
+  }, []);
+
+  return (
+    <>
+      {(ext === "glb" || ext === "gltf") && (
+        <GLTFLoader url={props.url} onReady={handleModelReady} />
+      )}
+      {ext === "fbx" && (
+        <FBXLoader url={props.url} onReady={handleModelReady} />
+      )}
+      {ext === "obj" && (
+        <OBJModelLoader url={props.url} onReady={handleModelReady} />
+      )}
+      {content && <ModelInner {...props} content={content} />}
+    </>
+  );
+};
+
+interface ModelInnerInternalProps extends ModelInnerProps {
+  content: THREE.Object3D | null;
+}
+
+const ModelInner: FC<ModelInnerInternalProps> = ({
   url,
   xOff,
   yOff,
@@ -153,6 +220,7 @@ const ModelInner: FC<ModelInnerProps> = ({
   autoRotate,
   autoRotateSpeed,
   onLoaded,
+  content,
 }) => {
   const outer = useRef<THREE.Group>(null!);
   const inner = useRef<THREE.Group>(null!);
@@ -163,15 +231,6 @@ const ModelInner: FC<ModelInnerProps> = ({
   const cPar = useRef({ x: 0, y: 0 });
   const tHov = useRef({ x: 0, y: 0 });
   const cHov = useRef({ x: 0, y: 0 });
-
-  const ext = useMemo(() => url.split(".").pop()!.toLowerCase(), [url]);
-  const content = useMemo<THREE.Object3D | null>(() => {
-    if (ext === "glb" || ext === "gltf") return useGLTF(url).scene.clone();
-    if (ext === "fbx") return useFBX(url).clone();
-    if (ext === "obj") return useLoader(OBJLoader, url).clone();
-    console.error("Unsupported format:", ext);
-    return null;
-  }, [url, ext]);
 
   const pivotW = useRef(new THREE.Vector3());
   useLayoutEffect(() => {
@@ -551,7 +610,7 @@ const ModelViewer: FC<ViewerProps> = ({
         />
 
         <Suspense fallback={<Loader placeholderSrc={placeholderSrc} />}>
-          <ModelInner
+          <ModelInnerWrapper
             url={url}
             xOff={modelXOffset}
             yOff={modelYOffset}
