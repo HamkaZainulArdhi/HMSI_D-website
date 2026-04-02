@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://sisfo23d-telkom.vercel.app
+
+# Sitemaps
+Sitemap: https://sisfo23d-telkom.vercel.app/sitemap.xml

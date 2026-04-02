@@ -13,9 +13,20 @@ export const metadata: Metadata = {
     "Welcome to the HMSI-D Home Page, where you can explore our latest features and updates.",
 };
 
+ const jsonLd = {
+   "@context": "https://schema.org",
+   "@type": "Organization",
+   name: "SID23 Telkom Purwokerto",
+   url: "https://sisfo23d-telkom.vercel.app",
+ };
+
 export default function Home() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <ScrollUp />
       <Hero />
       {/* <AboutClass /> */}
