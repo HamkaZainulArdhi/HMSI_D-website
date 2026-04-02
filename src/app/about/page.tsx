@@ -3,8 +3,8 @@ import ProfileSectionAbout from "@/components/feedIG about/MovingBorder";
 import GalleryPage from "@/components/galleryabout";
 
 export const metadata: Metadata = {
-  title: "HMSI-D | About Page",
-  description: "Learn more about HMSI-D, our mission, and our team.",
+  title: "Kelas S1S1-23-D | About Page",
+  description: "Temukan kisah seru dan momen berharga kelas S1S1-23-D Telkom University Purwokerto di halaman ini. Dari cerita kuliah, kegiatan seru, hingga dokumentasi kenangan, semua ada di sini. Jelajahi perjalanan kami selama kuliah bersama dan rasakan kehangatan persahabatan yang terjalin di kelas ini.",
   // other metadata
 };
 

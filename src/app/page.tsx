@@ -7,7 +7,7 @@ import FAQAccordion from "@/components/Accordion/index";
 import Head from "@/components/aboutclass/head";
 
 export const metadata: Metadata = {
-  title: "HMSI-D | Home Page",
+  title: "Kelas S1S1-23-D | Home Page",
   description:
     "Ini dia website kelas Sistem Informasi D 2023 ( S1SI-07-D ) Telkom University Purwokerto. Tempat kumpulnya cerita, kegiatan, dokumentasi, dan momen seru anak-anak SID 2023. Dibuat santai aja, yang penting seru dan penuh kenangan selama kuliah bareng.",
 };
