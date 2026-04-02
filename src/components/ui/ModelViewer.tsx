@@ -137,6 +137,11 @@ interface ModelInnerProps {
   onLoaded?: () => void;
 }
 
+const envMap = {
+  forest: "/hdri/forest_slope_1k.hdr",
+  studio: "/hdri/studio.hdr",
+};
+
 // Sub-components for each model format to avoid hooks-in-useMemo violation
 const GLTFLoader: FC<{
   url: string;
@@ -586,7 +591,7 @@ const ModelViewer: FC<ViewerProps> = ({
         style={{ touchAction: "pan-y pinch-zoom" }}
       >
         {environmentPreset !== "none" && (
-          <Environment preset={environmentPreset as any} background={false} />
+          <Environment files={envMap[environmentPreset]} background={false} />
         )}
 
         <ambientLight intensity={ambientIntensity} />

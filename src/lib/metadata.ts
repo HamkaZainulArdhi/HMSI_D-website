@@ -9,7 +9,7 @@ export const siteMetadata: Metadata = {
   },
 
   description:
-    "Website resmi kelas D23 Sistem Informasi Telkom Purwokerto. Informasi anggota, kegiatan, dan update terbaru mahasiswa.",
+    "Ini dia website kelas Sistem Informasi D (S1SI-07-D) Angkatan 2023 Telkom University Purwokerto. Tempat kumpulnya cerita, kegiatan, dokumentasi, dan momen seru anak-anak SID 2023. Dibuat santai aja, yang penting seru dan penuh kenangan selama kuliah bareng.",
 
   keywords: [
     "S1SI 23",
@@ -48,7 +48,7 @@ export const siteMetadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "https://i.ibb.co.com/Dfr2NXpH/Whats-App-Image-2026-04-02-at-18-21-33.jpg",
+        url: "https://i.ibb.co.com/rTbsfH8/Whats-App-Image-2026-04-02-at-18-21-33.jpg",
         width: 1200,
         height: 630,
         alt: "SID23 Telkom Purwokerto",
@@ -61,7 +61,7 @@ export const siteMetadata: Metadata = {
     title: "SID23 Telkom",
     description: "Website resmi kelas D23 Sistem Informasi Telkom Purwokerto.",
     images: [
-      "https://i.ibb.co.com/Dfr2NXpH/Whats-App-Image-2026-04-02-at-18-21-33.jpg",
+      "https://i.ibb.co.com/rTbsfH8/Whats-App-Image-2026-04-02-at-18-21-33.jpg",
     ],
   },
 

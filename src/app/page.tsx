@@ -1,4 +1,3 @@
-import Brands from "@/components/photobooth";
 import ScrollUp from "@/components/Common/ScrollUp";
 import Hero from "@/components/Hero";
 import ProfileSection from "@/components/feedIG/MovingBorder";
@@ -10,7 +9,7 @@ import Head from "@/components/aboutclass/head";
 export const metadata: Metadata = {
   title: "HMSI-D | Home Page",
   description:
-    "Welcome to the HMSI-D Home Page, where you can explore our latest features and updates.",
+    "Ini dia website kelas Sistem Informasi D 2023 ( S1SI-07-D ) Telkom University Purwokerto. Tempat kumpulnya cerita, kegiatan, dokumentasi, dan momen seru anak-anak SID 2023. Dibuat santai aja, yang penting seru dan penuh kenangan selama kuliah bareng.",
 };
 
  const jsonLd = {

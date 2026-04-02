@@ -16,18 +16,18 @@ const Head: React.FC = () => {
 
   return (
     <div className="flex flex-col items-center justify-between px-4 py-16 md:flex-row md:px-8 lg:px-16">
-      <div className="mb-8 w-full md:mb-0 md:w-1/2">
+      <div className="mb-8 w-full text-center md:mb-0 md:w-1/2 md:text-left">
         <h1
           style={{ fontFamily: "Playfair Display" }}
           className="mb-4 text-3xl font-bold md:text-4xl"
         >
           S1SI-07-D -- Kelas Kami Adalah KELAZZZZZ🥶
         </h1>
-        <p className="mb-6 ">
+        <p className="mb-6">
           Kami Adalah Kelas Sistem Informasi 07 D Fakultas Rekayasa industri
           telkom university yang penuh semangat dan
         </p>
-        <div className="flex flex-wrap gap-4">
+        <div className="flex flex-wrap justify-center gap-4 md:justify-start">
           <button onClick={() => handleScrollToSection("biaya")}>
             <ImagesBadgeDemo />
           </button>
@@ -36,7 +36,7 @@ const Head: React.FC = () => {
       <div className="">
         <ModelViewer
           url="/images/logo/3dmodel.glb"
-          width={500}
+          width={350}
           height={400}
           modelXOffset={0}
           modelYOffset={0}
