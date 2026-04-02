@@ -1,6 +1,7 @@
 "use client";
 import React, { useState, useEffect, useMemo, useRef } from "react";
 import { useTransition, a } from "@react-spring/web";
+import Image from "next/image";
 
 interface MasonryItem {
   id: string | number;
@@ -100,14 +101,15 @@ function Masonry({ data }: MasonryProps) {
           className="absolute p-[15px] [will-change:transform,width,height,opacity]"
         >
           <div
-            className="ease relative h-full w-full overflow-hidden rounded-[4px] text-[10px] leading-[10px] uppercase shadow-[0px_10px_50px_-10px_rgba(0,0,0,0.2)] transition duration-300 hover:scale-110"
-            style={{
-              backgroundColor: "#ffffff",
-              backgroundImage: `url(${item.image})`,
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-            }}
-          />
+            className="ease relative bg-slate-600 h-full w-full overflow-hidden rounded-[4px] text-[10px] leading-[10px] uppercase shadow-[0px_10px_50px_-10px_rgba(0,0,0,0.2)] transition duration-300 hover:scale-110" 
+          >
+            <Image
+              src={item.image}
+              alt=""
+              fill
+              className="object-cover object-center"
+            />
+          </div>
         </a.div>
       ))}
     </div>

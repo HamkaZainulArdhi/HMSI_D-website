@@ -4,6 +4,7 @@ import React from "react";
 import Folder from "../ui/Folder";
 import ModelViewer from "../ui/ModelViewer";
 import { ImagesBadgeDemo } from "../AternityUI/button-folder";
+import Link from "next/link";
 
 const Head: React.FC = () => {
   // Fungsi scroll ke elemen yang ditentukan berdasarkan id
@@ -28,9 +29,9 @@ const Head: React.FC = () => {
           telkom university yang penuh semangat dan
         </p>
         <div className="flex flex-wrap justify-center gap-4 md:justify-start">
-          <button onClick={() => handleScrollToSection("biaya")}>
+          <Link href="/team">
             <ImagesBadgeDemo />
-          </button>
+          </Link>
         </div>
       </div>
       <div className="">

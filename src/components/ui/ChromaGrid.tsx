@@ -3,6 +3,7 @@
 import React, { useRef, useEffect } from "react";
 import { gsap } from "gsap";
 import { chromaGridDemo } from "../team/chromaGridDemo";
+import Image from "next/image";
 
 export interface ChromaItem {
   image: string;
@@ -91,7 +92,7 @@ const ChromaGrid: React.FC<ChromaGridProps> = ({
       ref={rootRef}
       onPointerMove={handleMove}
       onPointerLeave={handleLeave}
-      className={`relative lg:px-8 grid w-full grid-cols-2 gap-4 md:grid-cols-3 md:gap-6 lg:grid-cols-5 lg:gap-5  ${className}`}
+      className={`relative grid w-full grid-cols-2 gap-4 md:grid-cols-3 md:gap-6 lg:grid-cols-5 lg:gap-5 lg:px-8 ${className}`}
       style={
         {
           "--r": `${radius}px`,
@@ -121,11 +122,13 @@ const ChromaGrid: React.FC<ChromaGridProps> = ({
             }}
           />
           <div className="relative z-10 box-border flex-1 p-[10px]">
-            <img
+            <Image
               src={c.image}
+              className="h-70 w-full rounded-[10px] object-cover"
+              height={250}
+              width={120}
               alt={c.title}
               loading="lazy"
-              className="h-70 w-full rounded-[10px] object-cover"
             />
           </div>
           <footer className="relative z-10 grid gap-x-3 gap-y-1 p-3 font-sans text-white">
