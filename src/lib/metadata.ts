@@ -5,7 +5,7 @@ export const siteMetadata: Metadata = {
 
   title: {
     default: "SID23 Telkom Purwokerto",
-    template: "%s | SID23 Telkom",
+    template: "%s",
   },
 
   description:
