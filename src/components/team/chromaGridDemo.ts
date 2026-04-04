@@ -108,7 +108,7 @@ export const chromaGridDemo: ChromaItem[] = [
   },
   {
     image: "/images/team/lita.jpg",
-    title: "Lolyta Madesha Maharani",
+    title: "Lyta Madesha Maharani",
     subtitle: "Cirebon",
     borderColor: "#EF4444",
     gradient: "linear-gradient(195deg,#EF4444,#000)",
@@ -158,7 +158,7 @@ export const chromaGridDemo: ChromaItem[] = [
   {
     image: "/images/team/tiaras.jpg",
     title: "Tiara Safitri Herdian",
-    subtitle: "Wonogiri",
+    subtitle: "Kebumen",
     borderColor: "#8B5CF6",
     gradient: "linear-gradient(225deg,#8B5CF6,#000)",
   },
@@ -207,7 +207,7 @@ export const chromaGridDemo: ChromaItem[] = [
   {
     image: "/images/team/sunu.jpg",
     title: "Sunu Risang Hanugroho",
-    subtitle: "Solo",
+    subtitle: "Medan",
     borderColor: "#06B6D4",
     gradient: "linear-gradient(135deg,#06B6D4,#000)",
   },
