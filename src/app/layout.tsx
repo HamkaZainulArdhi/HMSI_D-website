@@ -6,6 +6,7 @@ import "@/styles/index.css";
 import { poppins, playfairDisplay } from "@/styles/fonts";
 import { Providers } from "./providers";
 import { siteMetadata } from "@/lib/metadata";
+import { Analytics } from "@vercel/analytics/next";
 
 export const metadata = siteMetadata;
 
@@ -18,12 +19,15 @@ export default function RootLayout({
     <html suppressHydrationWarning lang="en">
       <head />
 
-      <body className={`bg-[#FCFCFC] dark:bg-black ${poppins.className} ${playfairDisplay.className}`}>
+      <body
+        className={`bg-[#FCFCFC] dark:bg-black ${poppins.className} ${playfairDisplay.className}`}
+      >
         <Providers>
           <Header />
           {children}
           <Footer />
         </Providers>
+        <Analytics />
       </body>
     </html>
   );
