@@ -9,6 +9,7 @@ import {
 } from "../ui/animated-modal";
 
 import { motion } from "motion/react";
+import Image from "next/image";
 
 export function AnimatedModalDemo() {
   const images = [
@@ -57,7 +58,7 @@ export function AnimatedModalDemo() {
                   }}
                   className="mt-4 -mr-4 shrink-0 overflow-hidden rounded-xl border border-neutral-100 bg-white p-1 dark:border-neutral-700 dark:bg-neutral-800"
                 >
-                  <img
+                  <Image
                     src={image}
                     alt="bali images"
                     width="500"
